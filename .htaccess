@@ -1,0 +1,58 @@
+# disable directory browsing
+Options ExecCGI Includes IncludesNOEXEC SymLinksIfOwnerMatch -Indexes
+
+# Handling SVG
+AddType image/svg+xml svg svgz .svg .svgz
+
+# Configure your website for HTML5 videos
+RewriteCond %{REQUEST_FILENAME} !-f
+RewriteCond %{REQUEST_FILENAME} !-d
+RewriteCond %{REQUEST_URI} !=/favicon.ico
+AddType video/ogg .ogv
+AddType video/ogg .ogg
+AddType video/mp4 .mp4
+AddType video/webm .webm
+AddType application/x-shockwave-flash swf
+
+# Speed up your site with .htaccess caching
+# 1 YEAR
+<FilesMatch "\.(ico|pdf|flv)$">
+Header set Cache-Control "max-age=29030400, public"
+</FilesMatch>
+# 1 WEEK
+<FilesMatch "\.(jpg|jpeg|png|gif|swf)$">
+Header set Cache-Control "max-age=604800, public"
+</FilesMatch>
+# 2 DAYS
+<FilesMatch "\.(xml|txt|css|js)$">
+Header set Cache-Control "max-age=172800, proxy-revalidate"
+</FilesMatch>
+# 1 MIN
+<FilesMatch "\.(html|htm|php)$">
+Header set Cache-Control "max-age=60, private, proxy-revalidate"
+</FilesMatch>
+
+# Cross Domain Font embedding for Firefox
+<FilesMatch "\.(ttf|otf|eot|woff)$">
+<IfModule mod_headers.c>
+    Header set Access-Control-Allow-Origin "http://aikamatka.fi"
+</IfModule>
+</FilesMatch>
+
+# Prevent hotlinking
+RewriteEngine On
+#Replace ?mysite\.com/ with your blog url
+RewriteCond %{HTTP_REFERER} !^http://(.+\.)?aikamatka\.fi/ [NC]
+RewriteCond %{HTTP_REFERER} !^$
+#Replace /images/nohotlink.jpg with your "don't hotlink" image url
+RewriteRule .*\.(jpe?g|gif|bmp|png)$ /images/nohotlink.jpg [L]
+
+# Force trailing slash
+<IfModule mod_rewrite.c>
+ RewriteCond %{REQUEST_URI} /+[^\.]+$
+ RewriteRule ^(.+[^/])$ %{REQUEST_URI}/ [R=301,L]
+</IfModule>
+<IfModule mod_rewrite.c>
+ RewriteCond %{REQUEST_URI} /+[^\.]+$
+ RewriteRule ^(.+[^/])$ %{REQUEST_URI}/ [R=301,L]
+</IfModule>
