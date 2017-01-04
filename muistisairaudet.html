@@ -6,56 +6,69 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
     <link rel='stylesheet' type='text/css' href='https://fonts.googleapis.com/css?family=Open+Sans:300,400,600,700,400italic'>
-    <link rel="stylesheet" type="text/css" href="css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+    <script src="http://cdnjs.cloudflare.com/ajax/libs/modernizr/2.6.2/modernizr.min.js"></script>
     <link rel="stylesheet" type="text/css" href="font-awesome/css/font-awesome.min.css">
     <link rel="stylesheet" type="text/css" href="css/style.css">
+    <link rel="stylesheet" type="text/css" href="css/normalize.css">
     <link href="favicon.ico" type="image/ico" rel="shortcut icon">
     <title>Aikakone - aikamatka.fi</title>
+    <link rel="stylesheet" href="SlickNav/slicknav.css" />
 </head>
 
 <body>
 <div class="main-body">
-    <nav class="navbar-default navbar-side" role="navigation">
-        <div class="sidebar-collapse">
-            <ul class="nav" id="main-menu">
-                <li>
-                    <div class="user-img-div">
-                        <img src="images/logo3demboss2.png" class="img-thumbnail" />
-                        <!--<div class="inner-text">
-                            Aikakone LOGO
-                        </div>-->
-                    </div>
-                </li>
+    <div class="nav-desktop">
+        <nav class="navbar-default navbar-side" role="navigation">
+            <div class="sidebar-collapse">
+                <ul class="nav" id="main-menu">
+                    <li>
+                        <div class="user-img-div">
+                            <a class="img-thumbnail" href="http://aikamatka.fi"><img alt="Aikakone" class="img-thumbnail" src="images/logo3demboss2.png"> </a>
 
-                <li>
-                    <a href="index.html"><i class="fa fa-tachometer"></i>Aikakone</a>
-                    <ul class="nav nav-second-level">
-                        <li>
-                            <a href="mikakone.html"><i class="fa fa-question "></i>Mikä on Aikakone?</a>
-                        </li>
-                        <li>
-                            <a href="mitahyotyaonaikakoneesta.html"><i class="fa fa-info "></i>Mitä hyötyä Aikakoneesta on?</a>
-                        </li>
-                    </ul>
-                </li>
-                <li>
-                    <a  class="active-menu"href="muistisairaudet.html"><i class="fa fa-yelp "></i>Muistisairaudet</a>
-                </li>
-                <li>
-                    <a href="muisteluterapia.html"><i class="fa fa-flash "></i>Muisteluterapia </a>
-                    <ul class="nav nav-second-level">
-                        <li>
-                            <a href="mikamuisteluterapia.html"><i class="fa fa-info "></i>Mitä hyötyä muisteluterapiasta on?</a>
-                        </li>
-                    </ul>
-                </li>
-                <li>
-                    <a href="contact.html"><i class="fa fa-comments-o "></i>Yhteydenotto</a>
-                </li>
-            </ul>
+                            <!--<div class="inner-text">
+                                Aikakone LOGO
+                            </div>-->
+                        </div>
+                    </li>
 
-        </div>
-    </nav>
+                    <li>
+                    <li>
+                        <a href="mikakone.html">Mikä on Aikakone?</a>
+                    </li>
+                    <li>
+                        <a href="mitahyotyaonaikakoneesta.html">Mitä hyötyä Aikakoneesta on?</a>
+                    </li>
+                    </li>
+                    <li>
+                        <a class="active-menu" href="muistisairaudet.html">Muistisairaat ja muistelu</a>
+                    </li>
+                    <li>
+                        <a href="muisteluterapia.html">Muisteluterapia </a>
+                    <li>
+                        <a href="mikamuisteluterapia.html">Mitä hyötyä muisteluterapiasta on?</a>
+                    </li>
+                    </li>
+                    <li>
+                        <a href="contact.html">Yhteydenotto</a>
+                    </li>
+                </ul>
+
+            </div>
+        </nav>
+    </div>
+    <div class="nav-mobile">
+        <ul id="menu">
+            <li><a href="mikakone.html">Mikä on Aikakone?</a></li>
+            <li><a href="mitahyotyaonaikakoneesta.html">Mitä hyötyä Aikakoneesta on?</a></li>
+            <li><a href="muistisairaudet.html">Muistisairaudet</a></li>
+            <li><a href="muisteluterapia.html">Muisteluterapia </a></li>
+            <li><a href="mikamuisteluterapia.html">Mitä hyötyä muisteluterapiasta on?</a></li>
+            <li><a href="contact.html">Yhteydenotto</a></li>
+        </ul>
+    </div>
     <div class="container">
         <div class="row">
             <div class="main-page">
@@ -121,5 +134,13 @@
 
 <script src="js/jquery-1.11.3.min.js"></script>
 <script src="js/bootstrap.min.js"></script>
+<script src="http://ajax.googleapis.com/ajax/libs/jquery/1/jquery.min.js"></script>
+<script src="SlickNav/jquery.slicknav.js"></script>
+<script type="text/javascript">
+    $(document).ready(function(){
+        $('#menu').slicknav();
+        $('.slicknav_menu').prepend('<a class="nav-mobile-logo-link" href="http://aikamatka.fi"><img alt="Aikakone" class="nav-mobile-logo-link"> </a>');
+    });
+</script>
 </body>
 </html>
