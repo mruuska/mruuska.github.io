@@ -5,27 +5,25 @@
 }  
 h5 {
     text-shadow: 2px 2px 0px #e2c47c;
+      font-size:200%
     font-family: myHeaderFont, "Antiqua", serif;
 }
 h4 {
     text-shadow: 2px 2px 0px #e2c47c;
+      font-size:300%;
     font-family: myHeaderFont, "Antiqua", serif;
 }
 @media only screen and (max-width: 2000px) {
-        h4 { font-size:300%;}
-        h5 { font-size:200%;}
+   body { font-size:200%;}
 }
 @media only screen and (max-width: 1500px) {
-        h4 { font-size:250%;}
-        h5 { font-size:150%;}
+   body { font-size:150%;}
 }
 @media only screen and (max-width: 1200px) {
-        h4 { font-size:200%;}
-        h5 { font-size:125%;}
+   body { font-size:100%;}
 }
 @media only screen and (max-width: 800px) {
-        h4 { font-size:150%;}
-        h5 { font-size:100%;}
+   body { font-size:50%;}
 }
 #fit_bg img {
     max-width: 100%;
