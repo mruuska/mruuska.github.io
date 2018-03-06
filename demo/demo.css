@@ -56,14 +56,14 @@ h6 {
     position: absolute;
     top: 5%; 
     width: 80%;
-    margin-left: 5%;
+    margin-left: 10vw;
     text-align: center;
 } 
 #index_text_box {
     position: absolute;
     top: 15%; 
     width: 60%;
-    margin-left: 15%;
+    margin-left: 15vw;
     text-align: left;
     z-index: 1;
 }
