@@ -61,7 +61,7 @@ h6 {
 } 
 #index_text_box {
     position: absolute;
-    top: 15%; 
+    top: 10vh; 
     width: 60%;
     margin-left: 15vw;
     text-align: left;
@@ -69,7 +69,7 @@ h6 {
 }
 #index_text_box_2 {
     position: absolute;
-    top: 15%; 
+    top: 10vh; 
     width: 40%;
     margin-left: 50vw;
     text-align: left;
