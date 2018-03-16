@@ -71,7 +71,7 @@ h6 {
     position: absolute;
     top: 5vh; 
     width: 30%;
-    margin-left: 15vw;
+    margin-left: 5vw;
     text-align: left;
     z-index: 1;
 }
@@ -79,7 +79,7 @@ h6 {
     position: absolute;
     top: 5vh; 
     width: 30%;
-    margin-left: 30vw;
+    margin-left: 35vw;
     text-align: left;
     z-index: 1;
 } 
